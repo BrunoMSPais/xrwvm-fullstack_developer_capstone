@@ -124,3 +124,62 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.main-content {
+    --spacing: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card {
+    width: 90vw;
+    margin-top: var(--spacing);
+    padding: var(--spacing);
+    border-radius: var(--spacing);
+    box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card_info-wrapper {
+    width: 100%;
+    margin-top: var(--spacing);
+    padding: var(--spacing);
+    border-top: 1px solid #00CED1;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: var(--spacing);
+}
+
+.contact-image {
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+.vertical-separator {
+    background-color: #999;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-card_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #1369c4;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact-card_info label,
+.contact-card_info p {
+    font-weight: bold;
+}
+
+.contact-card_info a {
+    color: inherit;
+    text-decoration: none;
+}
