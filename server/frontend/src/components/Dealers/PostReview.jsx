@@ -25,11 +25,11 @@ const PostReview = () => {
     let name = sessionStorage.getItem("firstname")+" "+sessionStorage.getItem("lastname");
     //If the first and second name are stores as null, use the username
     if(name.includes("null")) {
-      name = sessionStorage.getItem("username");
+        name = sessionStorage.getItem("username");
     }
     if(!model || review === "" || date === "" || year === "" || model === "") {
-      alert("All details are mandatory")
-      return;
+        alert("All details are mandatory")
+        return;
     }
 
     let model_split = model.split(" ");
@@ -37,29 +37,28 @@ const PostReview = () => {
     let model_chosen = model_split[1];
 
     let jsoninput = JSON.stringify({
-      "name": name,
-      "dealership": id,
-      "review": review,
-      "purchase": true,
-      "purchase_date": date,
-      "car_make": make_chosen,
-      "car_model": model_chosen,
-      "car_year": year,
+        "name": name,
+        "dealership": id,
+        "review": review,
+        "purchase": true,
+        "purchase_date": date,
+        "car_make": make_chosen,
+        "car_model": model_chosen,
+        "car_year": year,
     });
 
-    console.log(jsoninput);
     const res = await fetch(review_url, {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: jsoninput,
-  });
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: jsoninput,
+    });
 
-  const json = await res.json();
-  if (json.status === 200) {
-      window.location.href = window.location.origin+"/dealer/"+id;
-  }
+    const json = await res.json();
+    if (json.status === 200) {
+        window.location.href = window.location.origin+"/dealer/"+id;
+    }
 
   }
   const get_dealer = async ()=>{
@@ -69,7 +68,8 @@ const PostReview = () => {
     const retobj = await res.json();
     
     if(retobj.status === 200) {
-      let dealerobjs = Array.from(retobj.dealer)
+    //   let dealerobjs = Array.from(retobj.dealer)
+      let dealerobjs = [retobj.dealer]
       if(dealerobjs.length > 0)
         setDealer(dealerobjs[0])
     }
