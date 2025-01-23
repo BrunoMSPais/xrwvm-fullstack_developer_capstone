@@ -28,8 +28,21 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', 'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai', 'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud']
-CSRF_TRUSTED_ORIGINS = ['https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', 'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/', 'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud']
+ALLOWED_HOSTS = [
+    'localhost',
+    'https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0'
+    '.proxy.cognitiveclass.ai',
+    'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01'
+    '.proxy.cognitiveclass.ai',
+    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud'
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy'
+    '.cognitiveclass.ai',
+    'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy'
+    '.cognitiveclass.ai/',
+    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud'
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -94,7 +107,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation'
+        '.UserAttributeSimilarityValidator',
     },
     {
         'NAME':
@@ -143,4 +157,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build'),
     os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
-
