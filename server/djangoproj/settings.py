@@ -30,22 +30,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0'
-    '.proxy.cognitiveclass.ai',
+    'https://bpais-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01'
+    '.proxy.cognitiveclass.ai/',
     'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01'
     '.proxy.cognitiveclass.ai',
-    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud',
-    'https://bpais-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy'
-    '.cognitiveclass.ai/'
+    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud'
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://bpais-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy'
+    'https://bpais-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy'
     '.cognitiveclass.ai',
     'https://bpais-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy'
     '.cognitiveclass.ai/',
-    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud',
-    'https://bpais-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy'
-    '.cognitiveclass.ai/'
+    'https://sentianalyzer.1qzst7ewboy2.us-south.codeengine.appdomain.cloud'
 ]
 
 REST_FRAMEWORK = {
